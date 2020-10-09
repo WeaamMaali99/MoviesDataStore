@@ -8,16 +8,17 @@ class MoviesDa implements IMovieDa {
 
      public MoviesDa() {
 
-         movies.add(new Movies("The Lion King",1994,"Animation"));
-         movies.add(new Movies("Wonder Woman",2017,"Action"));
-        movies.add(new Movies("Halloween",1978,"Horror"));
-        movies.add(new Movies("Some Like it Hot",1959,"Comedy"));
+         movies.add(new Movies("The Lion King","1994","Animation"));
+         movies.add(new Movies("Wonder Woman","2017","Action"));
+        movies.add(new Movies("Halloween","1978","Horror"));
+        movies.add(new Movies("Some Like it Hot","1959","Comedy"));
+         movies.add(new Movies("Home Alone","1978","Comedy"));
 
      }
-     public List<Movies> getMovies(String titleMovies){
+     public List<Movies> getMovies(String titleMovies,String yearMov,String  generMove){
          ArrayList<Movies> data= new ArrayList<>();
          for (Movies mov: movies){
-             if (mov.getTitle().equalsIgnoreCase(titleMovies))
+             if (mov.getTitle().equalsIgnoreCase(titleMovies)||mov.getGenre().equalsIgnoreCase(generMove)||mov.getYear().equalsIgnoreCase(yearMov))
              {
                  data.add(mov);
              }

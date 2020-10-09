@@ -42,11 +42,11 @@ private EditText editText;
         IMovieDa objMoves = factory.getModel();
         String str = "";
         str = spinner.getSelectedItem().toString();
-        List<Movies> movies=objMoves.getMovies(str);
+        List<Movies> movies=objMoves.getMovies(str,str,str);
         String str1 = "";
 
         for (Movies mm :movies) {
-            str1+=mm.getTitle() + "\n" + mm.getYear() + "\n" + mm.getGenre();
+            str1+=mm.getTitle() + "\n" + mm.getYear() + "\n" + mm.getGenre()+"\n";
         }
         editText.setText(str1);
 
@@ -57,11 +57,11 @@ private EditText editText;
         IMovieDa objMoves = factory.getModel();
         String str = "";
         str=editText2.getText().toString();
-        List<Movies> movies=objMoves.getMovies(str);
+        List<Movies> movies=objMoves.getMovies(str,str,str);
         String item="";
         for (Movies m:movies){
 
-        item += m.getTitle() + "\n" + m.getYear() + "\n" + m.getGenre();
+        item += m.getTitle() + "\n" + m.getYear() + "\n" + m.getGenre()+"\n";
 
         }
         editText.setText(item);

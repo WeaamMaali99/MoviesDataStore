@@ -3,6 +3,6 @@ package edu.cs.birzeit.moviesdatastore.model;
 import java.util.List;
 
 public interface IMovieDa {
-    List<Movies> getMovies(String titleMovies);
+    public List<Movies> getMovies(String titleMovies,String yearMov,String  generMove);
     String[] getTitleMovies();
 }

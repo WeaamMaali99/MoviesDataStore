@@ -2,10 +2,10 @@ package edu.cs.birzeit.moviesdatastore.model;
 
 public class Movies {
     private String title;
-    private int year;
+    private String year;
     private String Genre;
 
-    public Movies(String title, int year, String genre) {
+    public Movies(String title, String year, String genre) {
         this.title = title;
         this.year = year;
         Genre = genre;
@@ -21,11 +21,11 @@ public Movies(){
         this.title = title;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
