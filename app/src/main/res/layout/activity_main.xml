@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/EdtSearch"
+            android:layout_width="329dp"
+            android:layout_height="match_parent"
+            android:text="Search"
+            android:textColor="#4d0026"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="37dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/images" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGetSearchMovies"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="253dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="#440250"
+        android:onClick="btnSearchMovies"
+        android:text="search"
+        android:textColor="#739900"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/imgeMovies"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/film" />
+
+    <TextView
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Movies Store"
+        android:textColor="#330033"
+        android:textSize="18dp"
+
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textSelect"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:text="Select "
+            android:textColor="#4d0026"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGetMovies"
+        android:layout_width="253dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="#33023C"
+        android:onClick="btnGetMoviesOnClick"
+        android:text="Search Movies"
+        android:textColor="#739900"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:layout_marginBottom="10dp"
+        android:background="#CDDC39"
+        android:scaleType="fitXY"
+        android:src="@drawable/button" />
+
+    <EditText
+        android:id="@+id/edtSelectMovies"
+        android:layout_width="225dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
+
+
+</LinearLayout>
