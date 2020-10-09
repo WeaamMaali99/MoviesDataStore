@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.List;
 
 import edu.cs.birzeit.moviesdatastore.model.IMovieDa;
@@ -31,24 +32,47 @@ private EditText editText;
     private void populateSpinner(){
         MovieFactory factory=new MovieFactory();
         IMovieDa objMovies =factory.getModel();
+        String[] item =new String[]{"title","year","Genre"};
         String[] titleMovies=objMovies.getTitleMovies();
-        ArrayAdapter<String> adapter=new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,titleMovies);
+
+        ArrayAdapter<String> adapter=new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,item);
         spinner.setAdapter(adapter);
+
 
     }
 
     public void btnGetMoviesOnClick(View view) {
         MovieFactory factory = new MovieFactory();
         IMovieDa objMoves = factory.getModel();
-        String str = "";
-        str = spinner.getSelectedItem().toString();
-        List<Movies> movies=objMoves.getMovies(str,str,str);
-        String str1 = "";
+        String selection = "";
+        selection = spinner.getSelectedItem().toString();
 
-        for (Movies mm :movies) {
-            str1+=mm.getTitle() + "\n" + mm.getYear() + "\n" + mm.getGenre()+"\n";
-        }
-        editText.setText(str1);
+if (selection.equals("title")) {
+    StringBuilder builder = new StringBuilder();
+    String[] titles= new String[]{"The Lion King","Halloween","some Like it Hot","Wonder Woman","Home Alone"};
+for (String s :titles) {
+    builder.append(s).append("\n ");
+    editText.setText(builder.toString());
+}
+
+
+
+}else if (selection.equals("year")){
+    StringBuilder builder = new StringBuilder();
+    String[] years= new String[]{"1994","2017","1978","1959"};
+    for (String s :years) {
+        builder.append(s).append("\n ");
+        editText.setText(builder.toString());
+    }
+    }else if (selection.equals("Genre")){
+    StringBuilder builder = new StringBuilder();
+    String[] Genres= new String[]{"Animation","Action","Horror","Comedy"};
+    for (String s :Genres) {
+        builder.append(s).append("\n ");
+        editText.setText(builder.toString());
+
+    }
+}
 
     }
 

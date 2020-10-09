@@ -25,9 +25,20 @@ class MoviesDa implements IMovieDa {
          }
          return data;
      }
+
      @Override
          public String[] getTitleMovies(){
          String[] titles= new String[]{"The Lion King","Halloween","some Like it Hot","Wonder Woman"};
            return titles;
             }
+    @Override
+            public String[] getYearovies(){
+                String[] years= new String[]{"1994","2017","1978","1959"};
+                return years;
+            }
+    @Override
+    public String[] getGenreovies(){
+        String[] Genres= new String[]{"Animation","Action","Horror","Comedy"};
+        return Genres;
+    }
  }
