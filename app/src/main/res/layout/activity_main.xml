@@ -40,7 +40,7 @@
         android:background="#440250"
         android:onClick="btnSearchMovies"
         android:text="search"
-        android:textColor="#739900"
+        android:textColor=" #ffffff"
         android:textSize="15dp" />
 
     <ImageView
@@ -94,7 +94,7 @@
         android:background="#33023C"
         android:onClick="btnGetMoviesOnClick"
         android:text="Search Movies"
-        android:textColor="#739900"
+        android:textColor=" #ffffff"
         android:textSize="15dp"
         android:textStyle="bold" />
 
